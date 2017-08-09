@@ -401,12 +401,15 @@ import java.util.List;
 
     public InitializationTrackSelection(TrackGroup group, int[] tracks) {
       super(group, tracks);
-      selectedIndex = indexOf(group.getFormat(0));
+      //selectedIndex = indexOf(group.getFormat(0));
+      selectedIndex = 0;
     }
 
     @Override
     public void updateSelectedTrack(long bufferedDurationUs) {
-      long nowMs = SystemClock.elapsedRealtime();
+
+      selectedIndex = 0;
+      /*long nowMs = SystemClock.elapsedRealtime();
       if (!isBlacklisted(selectedIndex, nowMs)) {
         return;
       }
@@ -418,7 +421,7 @@ import java.util.List;
         }
       }
       // Should never happen.
-      throw new IllegalStateException();
+      throw new IllegalStateException();*/
     }
 
     @Override
