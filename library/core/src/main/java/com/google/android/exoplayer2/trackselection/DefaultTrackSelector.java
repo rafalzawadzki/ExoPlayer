@@ -764,7 +764,6 @@ public class DefaultTrackSelector extends MappingTrackSelector {
    * @param adaptiveTrackSelectionFactory A factory for generating adaptive track selections, or
    *     null if a fixed track selection is required.
    * @return The {@link TrackSelection} for the renderer, or null if no selection was made.
-   * @throws ExoPlaybackException If an error occurs while selecting the tracks.
    */
   protected TrackSelection selectAudioTrack(TrackGroupArray groups, int[][] formatSupport,
       Parameters params, TrackSelection.Factory adaptiveTrackSelectionFactory) {
@@ -890,7 +889,6 @@ public class DefaultTrackSelector extends MappingTrackSelector {
    *     track, indexed by track group index and track index (in that order).
    * @param params The selector's current constraint parameters.
    * @return The {@link TrackSelection} for the renderer, or null if no selection was made.
-   * @throws ExoPlaybackException If an error occurs while selecting the tracks.
    */
   protected TrackSelection selectTextTrack(TrackGroupArray groups, int[][] formatSupport,
       Parameters params) {
@@ -957,7 +955,6 @@ public class DefaultTrackSelector extends MappingTrackSelector {
    *     track, indexed by track group index and track index (in that order).
    * @param params The selector's current constraint parameters.
    * @return The {@link TrackSelection} for the renderer, or null if no selection was made.
-   * @throws ExoPlaybackException If an error occurs while selecting the tracks.
    */
   protected TrackSelection selectOtherTrack(int trackType, TrackGroupArray groups,
       int[][] formatSupport, Parameters params) {
